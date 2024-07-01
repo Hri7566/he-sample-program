@@ -4,7 +4,7 @@ This is a sample program for [hengine](https://github.com/Hri7566/hengine).
 
 ## Requirements
 
-You must have [premake5](https://premake.github.io/), [ninja](https://ninja-build.org/), and [raylib](https://www.raylib.com/) installed system-wide.
+For compilation, you must have [premake5](https://premake.github.io/), [ninja](https://ninja-build.org/), and [raylib](https://www.raylib.com/) installed system-wide.
 
 ## Building
 
