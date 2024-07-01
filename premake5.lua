@@ -8,11 +8,11 @@ require "premake-ninja.ninja"
 
 require "hengine.premake5"
 
-workspace "HengineTest2"
+workspace "SampleProgram"
 	configurations { "Debug", "Release" }
 	platforms { "Linux", "Win64" }
 
-	project "HengineTest2"
+	project "SampleProgram"
 		kind "ConsoleApp"
 		language "C++"
 		targetdir "bin/%{cfg.buildcfg}"
