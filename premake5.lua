@@ -6,17 +6,24 @@
 
 require "premake-ninja.ninja"
 
-workspace "Hengine"
+require "hengine.premake5"
+
+workspace "HengineTest2"
 	configurations { "Debug", "Release" }
 	platforms { "Linux", "Win64" }
 
 	project "HengineTest2"
 		kind "ConsoleApp"
 		language "C++"
-		targetdir "bin/test/%{cfg.buildcfg}"
-		links { "hengine", "raylib" }
+		targetdir "bin/%{cfg.buildcfg}"
+		links { "raylib", "hengine/bin/hengine/Debug/Hengine:static" }
 
-		files { "src/test/**.hpp", "src/test/**.cpp" }
+		libdirs { "hengine/src/hegine/**.hpp" }
+
+		files {
+			"src/**.hpp",
+			"src/**.cpp"
+		}
 
 		filter "platforms:Linux"
 			system "Linux"
